@@ -1,6 +1,6 @@
 # bs-pomodoro
 
-Minimal Next.js bindings written in ReasonML
+Pomodoro Clock utilities written in ReasonML
 
 ## Installation
 
