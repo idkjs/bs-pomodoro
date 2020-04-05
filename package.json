@@ -1,0 +1,69 @@
+{
+  "name": "@idkjs/bs-pomodoro",
+  "version": "0.21.0",
+  "description": "Minimal Next.js bindings written in ReasonML",
+  "main": "src/Next.re",
+  "types": "dist/types/Next.gen.d.ts",
+  "author": "Anthony Mittaz",
+  "license": "MIT",
+  "scripts": {
+    "build": "bsb -make-world",
+    "dev": "bsb -make-world -w",
+    "clean": "bsb -clean-world",
+    "test": "yarn build && jest",
+    "test-watch:jest": "jest -o --watch",
+    "test-watch": "run-p -c dev test-watch:jest",
+    "format": "bsrefmt --in-place src/*.r*",
+    "typecheck": "tsc --noEmit",
+    "build-types": "tsc --emitDeclarationOnly",
+    "preversion": "yarn clean && yarn format && yarn build-types && yarn test"
+  },
+  "files": [
+    "src",
+    "dist",
+    "bsconfig.json"
+  ],
+  "keywords": [
+    "react",
+    "reason",
+    "reason-react",
+    "reasonml",
+    "ocaml",
+    "bucklescript",
+    "next.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/idkjs/bs-pomodoro.git"
+  },
+  "peerDependencies": {
+    "bs-platform": "^7.0.0",
+    "gentype": "^3.6.0",
+    "next": "^9.1.4",
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "reason-react": "^0.7.0"
+  },
+  "devDependencies": {
+    "@glennsl/bs-jest": "0.5.1",
+    "@types/node": "12.12.31",
+    "@types/react": "16.9.32",
+    "bs-platform": "7.2.2",
+    "bs-react-testing-library": "0.6.0",
+    "gentype": "3.18.0",
+    "next": "9.3.4",
+    "npm-run-all": "4.1.5",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "reason-react": "0.7.0",
+    "typescript": "3.8.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "testMatch": [
+      "**/lib/js/__tests__/*_test.bs.js"
+    ]
+  }
+}
