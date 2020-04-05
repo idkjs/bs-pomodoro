@@ -15,8 +15,5 @@
     "@idkjs/bs-pomodoro": "https://github.com/idkjs/bs-pomodoro",
     "react": "^16.8.1",
     "react-dom": "^16.8.1"
-  },
-  "devDependencies": {
-
   }
 }

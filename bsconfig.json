@@ -4,11 +4,7 @@
     "react-jsx": 3
   },
   "sources": [
-    "src",
-    {
-      "dir": "__tests__",
-      "type": "dev"
-    }
+    "src"
   ],
   "package-specs": [
     {

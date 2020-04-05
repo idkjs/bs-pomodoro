@@ -25,3 +25,9 @@ Then add it to `bsconfig.json`:
 ```sh
 yarn publish --minor --access public
 ```
+
+## Exportin ts files
+
+1. Add `index.j` to `./src`
+2. Export the `.bs.js` files.
+3. In `package.json` add `"main": "src/index.js"`.
