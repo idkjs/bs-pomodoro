@@ -4,7 +4,7 @@
 
 "@idkjs/bs-pomodoro@https://github.com/idkjs/bs-pomodoro":
   version "0.21.0"
-  resolved "https://github.com/idkjs/bs-pomodoro#78a12481329e40454585b0571c5adcb049e48eba"
+  resolved "https://github.com/idkjs/bs-pomodoro#36d7ddba026612b6340fdd91496a6152f090cfc3"
 
 "js-tokens@^3.0.0 || ^4.0.0":
   version "4.0.0"

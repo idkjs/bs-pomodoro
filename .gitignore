@@ -6,5 +6,4 @@ lib/
 *.bs.js
 *.gen.tsx
 dist
-examples/reason/.cache
-examples/example-ts/.cache
+**/*.cache

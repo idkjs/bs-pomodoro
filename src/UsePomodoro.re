@@ -1,7 +1,20 @@
 [@bs.val] external document: Js.t({..}) = "document";
+  [@genType]
+type stopPomodoro = unit =>unit;
+  [@genType]
+type resetPomodoro = unit =>unit;
+  [@genType]
+type startPomodoro = unit =>unit;
+
+// type pomodoroResult ={
+//   time: string,
+//   startPomodoro,
+//   stopPomodoro,
+//   resetPomodoro,
+// };
 
 [@genType "usePomodoro"]
-let usePomodoro = (initialTime: string) => {
+let usePomodoro= (initialTime: string) => {
   let finishedTime = "00:00";
 
   let (timerId, setTimerId) = React.useState(() => None);
@@ -13,7 +26,9 @@ let usePomodoro = (initialTime: string) => {
     None;
   });
   let isFinished = startTime => startTime === finishedTime;
-  let stopPomodoro = () => {
+
+  [@genType]
+  let stopPomodoro:stopPomodoro = () => {
     switch (timerId) {
     | Some(timerId) =>
       timerId->Js.Global.clearInterval;
@@ -34,15 +49,16 @@ let usePomodoro = (initialTime: string) => {
         ? finishTimer() : Timer.calculateNewTime(startTime);
     setTime(_ => newTime);
   };
-  let startPomodoro = () => {
+    [@genType]
+  let startPomodoro:startPomodoro = () => {
     let timerId = Js.Global.setInterval(updateTime, 1000);
     setTimerId(_ => Some(timerId));
   };
-
-  let resetPomodoro = () => {
+  [@genType]
+  let resetPomodoro:resetPomodoro = () => {
     stopPomodoro();
     setTime(_ => initialTime);
   };
 
-  (time, startPomodoro, stopPomodoro, resetPomodoro);
+(time, startPomodoro, stopPomodoro, resetPomodoro)
 };
