@@ -2,7 +2,7 @@
   "name": "@idkjs/bs-pomodoro",
   "version": "0.21.0",
   "description": "Minimal Next.js bindings written in ReasonML",
-  "main": "src/Next.re",
+  "main": "src/index.js",
   "types": "dist/types/Next.gen.d.ts",
   "author": "Anthony Mittaz",
   "license": "MIT",
@@ -16,7 +16,9 @@
     "format": "bsrefmt --in-place src/*.r*",
     "typecheck": "tsc --noEmit",
     "build-types": "tsc --emitDeclarationOnly",
-    "preversion": "yarn clean && yarn format && yarn build-types && yarn test"
+    "preversion": "yarn clean && yarn format && yarn build-types && yarn test",
+    "bundle": "webpack",
+    "prepare": "yarn build"
   },
   "files": [
     "src",
@@ -56,7 +58,9 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "reason-react": "0.7.0",
-    "typescript": "3.8.3"
+    "typescript": "3.8.3",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
   },
   "jest": {
     "moduleFileExtensions": [

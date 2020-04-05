@@ -1,0 +1,22 @@
+{
+  "name": "bs-pomo-example",
+  "version": "0.1.0",
+  "scripts": {
+    "serve": "parcel index.html --port 8000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pomodoro",
+    "timer"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@idkjs/bs-pomodoro": "https://github.com/idkjs/bs-pomodoro",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1"
+  },
+  "devDependencies": {
+
+  }
+}
