@@ -6,7 +6,7 @@ function ClockDemo({ initialTime }) {
   const { startPomodoro, stopPomodoro, resetPomodoro, time } = usePomodoro(
     initialTime,
   );
-
+console.log(time);
   return (
     <main className="app manager">
       <div className="timer-container">

@@ -7,3 +7,4 @@ lib/
 *.gen.tsx
 dist
 examples/reason/.cache
+examples/example-ts/.cache
