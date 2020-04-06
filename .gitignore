@@ -7,3 +7,5 @@ lib/
 *.gen.tsx
 dist
 **/*.cache
+examples/example-js/yarn.lock
+examples/example-ts/yarn.lock
