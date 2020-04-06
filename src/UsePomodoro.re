@@ -14,7 +14,7 @@ let usePomodoro = (initialTime: string) => {
   });
   let isFinished = startTime => startTime === finishedTime;
 
-  [@genType]
+
   let stopPomodoro = () => {
     switch (timerId) {
     | Some(timerId) =>
@@ -36,12 +36,12 @@ let usePomodoro = (initialTime: string) => {
         ? finishTimer() : Timer.calculateNewTime(startTime);
     setTime(_ => newTime);
   };
-  [@genType]
+
   let startPomodoro = () => {
     let timerId = Js.Global.setInterval(updateTime, 1000);
     setTimerId(_ => Some(timerId));
   };
-  [@genType]
+
   let resetPomodoro = () => {
     stopPomodoro();
     setTime(_ => initialTime);
