@@ -1,4 +1,3 @@
-
 [@react.component]
 let make = (~initialTime: string) => {
   let (time, startPomodoro, stopPomodoro, resetPomodoro) =

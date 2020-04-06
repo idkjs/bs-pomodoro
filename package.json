@@ -3,7 +3,7 @@
   "version": "0.21.0",
   "description": "Pomodoro Clock Utilities written in ReasonML",
   "main": "src/index.js",
-  "types": "dist/types/UsePomodoro.gen.d.ts",
+  "types": "dist/types/*.gen.d.ts",
   "author": "Alain Armand",
   "license": "MIT",
   "scripts": {
