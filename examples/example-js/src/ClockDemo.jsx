@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './Clock.css';
-import usePomodoro from '@idkjs/bs-pomodoro';
+import usePomodoro from '@idkjs/lambdadoro';
 
 function ClockDemo(props) {
   const [time, startPomodoro, stopPomodoro, resetPomodoro] = usePomodoro(
@@ -10,7 +10,9 @@ function ClockDemo(props) {
   return (
     <main className="app manager">
       <div className="timer-container">
-      <h2 className="title">Lambdadoro in JS<a href="https://github/idkjs/lambdadoro"></a></h2>
+        <h2 className="title">
+          Lambdadoro in JS<a href="https://github/idkjs/lambdadoro"></a>
+        </h2>
         <h1 id="time" className="countdown">
           {time}
         </h1>

@@ -18,7 +18,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@idkjs/bs-pomodoro": "file:../../",
+    "@idkjs/lambdadoro": "file:../../",
     "reason-react": ">=0.7.0",
     "react-app-polyfill": "^1.0.6"
   },

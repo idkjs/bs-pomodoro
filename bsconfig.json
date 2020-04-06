@@ -1,11 +1,9 @@
 {
-  "name": "@idkjs/bs-pomodoro",
+  "name": "@idkjs/lambdadoro",
   "reason": {
     "react-jsx": 3
   },
-  "sources": [
-    "src"
-  ],
+  "sources": ["src"],
   "package-specs": [
     {
       "module": "commonjs"

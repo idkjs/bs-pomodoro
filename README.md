@@ -8,23 +8,23 @@ and just to learn, obviously.
 
 ```shell
 # yarn from git
-yarn add idkjs/bs-pomodoro
+yarn add idkjs/lambdadoro
 
 # or npm from git
-npm install --save idkjs/bs-pomodoro
+npm install --save idkjs/lambdadoro
 ```
 
 Then add it to `bsconfig.json`:
 
 ```json
 "bs-dependencies": [
-  "@idkjs/bs-pomodoro"
+  "@idkjs/lambdadoro"
 ]
 ```
 
 ## Using Lambadoro in Reason
 
-see [`examples/reason`](./examples/reason) or see it live ->[reason](reason.lambdadoro.surge.sh) 
+see [`examples/reason`](./examples/reason) or see it live ->[reason](reason.lambdadoro.surge.sh)
 
 `usePomodoro` takes an optional `initialTime` arg. If you have to pass in the arg even if you dont call it on your component. `usePomodoro` will look for the value and pass a default if not is provided.
 
@@ -43,31 +43,29 @@ let make = (~initialTime:option(string)=?) => {
 };
 ```
 
-## Installation in Typescript/Javascript 
+## Installation in Typescript/Javascript
 
 ```shell
 # yarn from git
-yarn add idkjs/bs-pomodoro
+yarn add idkjs/lambdadoro
 
 # or npm from git
-npm install --save idkjs/bs-pomodoro
+npm install --save idkjs/lambdadoro
 ```
 
 Then add it to `bsconfig.json`:
 
 ```json
 "bs-dependencies": [
-  "@idkjs/bs-pomodoro"
+  "@idkjs/lambdadoro"
 ]
 ```
 
 ## Using Lambadoro in Typescript/Javascript
 
-see [`examples/example-ts`](./examples/example-ts) or live ->[typescript](typescript.lambdadoro.surge.sh) 
+see [`examples/example-ts`](./examples/example-ts) or live ->[typescript](typescript.lambdadoro.surge.sh)
 
-see [`examples/example-js`](./examples/example-js) or live ->[javascript](javascript.lambdadoro.surge.sh) 
-
-
+see [`examples/example-js`](./examples/example-js) or live ->[javascript](javascript.lambdadoro.surge.sh)
 
 ```reason
 [@react.component]

@@ -14,7 +14,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@idkjs/bs-pomodoro": "file:../../src",
+    "@idkjs/lambdadoro": "file:../../src",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
