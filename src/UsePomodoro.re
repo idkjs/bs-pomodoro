@@ -1,19 +1,6 @@
 [@bs.val] external document: Js.t({..}) = "document";
-// [@genType]
-// type stopPomodoro = unit => unit;
-// [@genType]
-// type resetPomodoro = unit => unit;
-// [@genType]
-// type startPomodoro = unit => unit;
 
-// type pomodoroResult ={
-//   time: string,
-//   startPomodoro,
-//   stopPomodoro,
-//   resetPomodoro,
-// };
-
-[@genType "usePomodoro"]
+[@genType]
 let usePomodoro = (initialTime: string) => {
   let finishedTime = "00:00";
 
