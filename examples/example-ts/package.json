@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "scripts": {
     "serve": "parcel index.html --port 9000",
+    "surge": "surge dist typescript.lambdadoro.surge.sh",
+    "presurge": "rm -rf dist && parcel build index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -17,6 +19,7 @@
     "react-dom": "^16.8.1"
   },
   "devDependencies": {
+    "cssnano": "^4.1.10",
     "typescript": "^3.8.3"
   }
 }

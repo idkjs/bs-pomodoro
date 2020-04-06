@@ -1,3 +1,4 @@
+
 [@react.component]
 let make = (~initialTime:option(string)=?) => {
   let (time, startPomodoro, stopPomodoro, resetPomodoro) =
@@ -5,6 +6,7 @@ let make = (~initialTime:option(string)=?) => {
 
   <main className="app manager">
     <div className="timer-container">
+    <h2 className="title">{React.string("Lambdadoro in ")}<a href="https://reasonml.github.io/reason-react/">{React.string("ReasonML")}</a></h2>
       <h1 id="time" className="countdown"> {React.string(time)} </h1>
     </div>
     <div>

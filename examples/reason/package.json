@@ -6,6 +6,8 @@
     "start": "bsb -make-world -w",
     "clean": "bsb -clean-world",
     "serve": "parcel index.html --port 9000",
+    "surge": "surge dist reason.lambdadoro.surge.sh",
+    "presurge": "rm -rf dist && parcel build index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

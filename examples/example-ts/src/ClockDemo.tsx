@@ -1,5 +1,6 @@
 import * as React from 'react';
 import usePomodoro from '@idkjs/bs-pomodoro';
+
 // create a type defining our option string prop type coming in from UsePomodor.gen
 type Props = {
   initialTime?: string
@@ -7,14 +8,13 @@ type Props = {
 
 
 const ClockDemo: React.FC<Props> = (props: Props) => {
-// if (props.initialTime===null||undefined){
-//   let [time, startPomodoro,stopPomodoro,resetPomodoro] = usePomodoro();
-// }
-console.log(props.initialTime)
+
   let [time, startPomodoro,stopPomodoro,resetPomodoro] = usePomodoro(props.initialTime);
+
   return (
     <main className="app manager">
       <div className="timer-container">
+      <h2 className="title">Lambdadoro in Typescript<a href="https://github/idkjs/lambdadoro"></a></h2>
         <h1 id="time" className="countdown">
           {time}
         </h1>
