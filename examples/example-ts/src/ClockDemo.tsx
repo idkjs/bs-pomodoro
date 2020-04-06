@@ -1,12 +1,17 @@
 import * as React from 'react';
-import './App.css';
-import { usePomodoro } from '@idkjs/bs-pomodoro';
+import usePomodoro from '@idkjs/bs-pomodoro';
+// create a type defining our option string prop type coming in from UsePomodor.gen
+type Props = {
+  initialTime?: string
+}
 
-function ClockDemo({ initialTime }) {
-  const [time, startPomodoro, stopPomodoro, resetPomodoro] = usePomodoro(
-    initialTime
-  );
-  console.log(initialTime);
+
+const ClockDemo: React.FC<Props> = (props: Props) => {
+// if (props.initialTime===null||undefined){
+//   let [time, startPomodoro,stopPomodoro,resetPomodoro] = usePomodoro();
+// }
+console.log(props.initialTime)
+  let [time, startPomodoro,stopPomodoro,resetPomodoro] = usePomodoro(props.initialTime);
   return (
     <main className="app manager">
       <div className="timer-container">

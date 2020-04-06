@@ -12,7 +12,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@idkjs/bs-pomodoro": "https://github.com/idkjs/bs-pomodoro",
+    "@idkjs/bs-pomodoro": "file:../../src",
     "react": "^16.8.1",
     "react-dom": "^16.8.1"
   },

@@ -5,7 +5,7 @@
     "build": "bsb -make-world",
     "start": "bsb -make-world -w",
     "clean": "bsb -clean-world",
-    "serve": "parcel index.html --port 8000",
+    "serve": "parcel index.html --port 9000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -16,13 +16,18 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@idkjs/bs-pomodoro": "https://github.com/idkjs/bs-pomodoro",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
-    "reason-react": ">=0.7.0"
+    "@idkjs/bs-pomodoro": "file:../../",
+    "reason-react": ">=0.7.0",
+    "react-app-polyfill": "^1.0.6"
   },
   "devDependencies": {
     "bs-platform": "^7.2.2",
-    "bsb-js": "^1.1.7"
+    "bsb-js": "^1.1.7",
+    "parcel": "^1.12.4"
+  },
+  "alias": {
+    "react": "../../node_modules/react",
+    "react-dom": "../../node_modules/react-dom/profiling",
+    "scheduler/tracing": "../../node_modules/scheduler/tracing-profiling"
   }
 }

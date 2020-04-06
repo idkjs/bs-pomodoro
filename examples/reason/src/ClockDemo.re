@@ -1,5 +1,5 @@
 [@react.component]
-let make = (~initialTime: string) => {
+let make = (~initialTime:option(string)=?) => {
   let (time, startPomodoro, stopPomodoro, resetPomodoro) =
     UsePomodoro.usePomodoro(initialTime);
 

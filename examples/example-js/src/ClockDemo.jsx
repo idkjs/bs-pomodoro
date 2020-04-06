@@ -1,12 +1,12 @@
 import * as React from 'react';
-import './App.css';
-import { usePomodoro } from '@idkjs/bs-pomodoro';
+import './Clock.css';
+import usePomodoro from '@idkjs/bs-pomodoro';
 
-function ClockDemo({ initialTime }) {
+function ClockDemo(props) {
   const [time, startPomodoro, stopPomodoro, resetPomodoro] = usePomodoro(
-    initialTime
+    props.initialTime
   );
-  console.log(initialTime);
+
   return (
     <main className="app manager">
       <div className="timer-container">

@@ -12,8 +12,13 @@ let splitByColon = split(":");
 let toString = (number: int) => number->string_of_int;
 
 let mod60 = number => number mod 60;
-// let compose = (f, g, x) => f(g(x));
-let compose = (func1, func2, value) => func1(func2(value));
+// type compose('a, 'b, 'c) = ('b => 'c, 'a => 'b, 'a) => 'c;
+// let compose: compose('a, 'b, 'c) = (f, g, x) => f(g(x));
+type compose('func1, 'func2, 'value) = ('func2 => 'value, 'func1 => 'func2, 'func1) => 'value;
+//  this is same as below: `let compose = (func1, func2, value) => func1(func2(value));`
+let compose_test = (func1, func2, value) => func1(func2(value));
+let compose:compose('func1, 'func2, 'value) = (func1, func2, value) => func1(func2(value));
+
 let getMinute = compose(second, splitByColon);
 let getHour = compose(first, splitByColon);
 
@@ -38,7 +43,7 @@ let getNewTime = (hours, minutes) =>
   | (hours, minutes) => (hours, minutes->int_of_string->nextMinute)
   };
 
-[@genType "Timer"]
+[@genType]
 let calculateNewTime = (startTime: string) => {
   let hour = getHour(startTime) |> Option.getExn;
   let minute = getMinute(startTime) |> Option.getExn;

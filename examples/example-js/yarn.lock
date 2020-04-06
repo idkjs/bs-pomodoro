@@ -2,9 +2,8 @@
 # yarn lockfile v1
 
 
-"@idkjs/bs-pomodoro@https://github.com/idkjs/bs-pomodoro":
-  version "0.1.0"
-  resolved "https://github.com/idkjs/bs-pomodoro#e434bcc074eff8a0add6a60c6f56c45eb34dc87b"
+"@idkjs/bs-pomodoro@file:../../src":
+  version "0.0.0"
 
 "js-tokens@^3.0.0 || ^4.0.0":
   version "4.0.0"
